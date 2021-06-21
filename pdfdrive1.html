@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class-08 Mathematics</title>
+</head>
+
+<body>
+  <div id="pdfDrive">
+    <script>
+      var i = localStorage.getItem("key");
+      console.log(i);
+      document.write(i)
+      var chaps = ["Rational Numbers", "Linear Equations in One Variable", "Understanding Quadrilaterals", "Practical Geometry", "Data Handling", "Squares And Square Roots", "Cubes And Cube Roots", "Comparing Quantities", "Algebraic Expressions And Identities", "Visualising SOlid Shapes", "Mensuration", "Exponents And Powers", "Direct And Inverse Proportions", "Factorisation", "Introduction To Graphs","Playing With Numbers","Answers"
+      ]
+      document.getElementById("pdfDrive").innerHTML = `<embed type="application/pdf" src="./class8/${chaps[i-1]}.pdf" style = "width: 99vw; height: 95vh;">`
+    </script>
+  </div>
+</body>
+
+</html>

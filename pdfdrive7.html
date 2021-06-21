@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class-08 Mathematics</title>
+</head>
+
+<body>
+  <div id="pdfDrive">
+    <script>
+      var i = localStorage.getItem("key");
+      console.log(i);
+      document.write(i)
+      var chaps = ["Integers", "Fractions And Decimals", "Data Handling", "Simple Equations", "Lines And Angles", "The Triangle And Its Properties", "Congruence Of Triangles", "Comparing Quantities", "Rational Numbers", "Practical Geometry", "Perimeter And Area", "Algebraic Expressions", "Exponents And Powers", "Symmetry","visualising Solid Shapes","Answers"
+      ]
+      document.getElementById("pdfDrive").innerHTML = `<embed type="application/pdf" src="./class7/${chaps[i-1]}.pdf" style = "width: 99vw; height: 95vh;">`
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FORMULASHEETS</title>
+</head>
+
+<body>
+  <div id="pdfDrive">
+    <script>
+      var i = localStorage.getItem("key");
+      console.log(i);
+      document.write(i)
+      var chaps = ["Straight Line-Formula","Circle-Formula","Parabola-Formula","Ellipse-Formula","Hyperbola-Formula","Functions-Formula","Differential Equations-Formula","Application Of Derivatives-Formula","Indefinite Integration-Formula","Definite Integration-Formula","Trigonometric-Formula","Quadratic Equations-Formula","Sequence & Series-Formula","Binomial Theorem-Formula","Permutation & Combination-Formula","Probability-Formula","Complex Number-Formula","Vectors-Formula","3-Dimension-Formula","Solution Of Triangle-Formula","Inverse Trigonometric-Formula","Statistics-Formula","Mathematical Reasoning-Formula","Sets And Relation-Formula",]
+      
+      document.getElementById("pdfDrive").innerHTML = `<embed type="application/pdf" src="./class12formula/${chaps[i-1]}.pdf" style = "width: 99vw; height: 95vh;">`
+    </script>
+  </div>
+</body>
+
+</html>

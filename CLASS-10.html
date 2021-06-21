@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class-10 Pdf</title>
+    <!--styles37 css-->
+    <link rel="stylesheet" href="../styles37.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <!--font <style-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #00b8a9;
+            text-align: right;
+        }
+        h1{
+          text-align: center;
+        }
+        .container h1 {
+            margin-top: 40px;
+            position: relative;
+            color: white;
+            margin-left: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 40px;
+        }
+        .pdf1 a {
+            border-radius: 30px;
+            text-decoration: none;
+            color: #000;
+            background-color: white;
+            width: 400px;
+            padding: 8px;
+            margin: 10px 2px;
+            display: flex;
+            align-items: center;
+            transition: 0.9s;
+        }
+        .pdf1 a p {
+            margin: 0;
+            font-weight: 600;
+            width: fit-content;
+            margin-left: 25px;
+        }
+        .pdf1 a:hover svg {
+            padding-left: 385px;
+            transition: 0.5s;
+        }
+        .pdf1 a:hover {
+            border-radius: 30px;
+            color: #fff;
+            background: red;
+            transition: 0.6s;
+        }
+        .pdf1 a svg {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Class-10 NCERT Pdf</h1>
+            <div id="pdfs">
+                <script>
+                    var chaps = ["Real Number", "Polynomials", "Pair Of Linear Equations 2 variable ", "Quadratic Equations", "Arithmetic Progressions", "Triangles", "Coordinate Geometry", "Introduction To Geometry", "Some Applications Of Trigonometry", "Circles", "Constructions", "Areas Related To Circles", "Surface Areas And Volumes", "Statistics", "Probability"]
+                    for (let i = 1; i <= 15; i++) {
+                        var pdfs = document.createElement('div');
+                        pdfs.className = "pdf1";
+                        pdfs.id = "pdfFile" + i
+                        document.getElementById('pdfs').appendChild(pdfs);
+                        var num = i.toString();
+                        var id = "pdfFile" + num;
+                        document.getElementById(id).innerHTML = `<a id="${"btn" + num}" href = "./pdfdrive2.html" target = "_blank" onclick = "pdfToggle(${i})"><svg viewBox="0 0 256 512"><path d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z" class=""></path></svg><p>Chapter - ${num} ${chaps[i - 1]}</p></a>`
+                    }
+                </script>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function pdfToggle(x) {
+            var chaps = ["Real Number", "Polynomials", "Pair Of Linear Equations 2 variable", "Quadratic Equations", "Arithmetic Progressions", "Triangles", "Coordinate Geometry", "Introduction To Geometry", "Some Applications Of Trigonometry", "Circles", "Constructions", "Areas Related To Circles", "Surface Areas And Volumes", "Statistics", "Probability"]
+            console.log(x);
+            localStorage.setItem("key", x);
+            console.log("key");
+            // pdfClass(chaps[x-1]);
+        }
+    </script>
+</body>
+
+</html>
